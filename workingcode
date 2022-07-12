@@ -8,9 +8,8 @@ Exercises
 4. Change the speed of the ball.
 """
 
-from random import randint, random, randrange
+from random import randint, randrange
 from turtle import *
-from urllib import response
 
 from freegames import vector
 
@@ -20,30 +19,15 @@ ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
+problem = randint
 
 def tap(x, y):
     """Respond to screen tap."""
-    #Make the math problem!    
-    number_one = randint(1, 10)
-    number_two = randint(1, 10)
-    answer = str((number_one*number_two))
-    problem = ('What is' + ' ' + str(number_one) + ' ' + "times" + ' ' + str(number_two))
-
-
-    wn = Screen()
-    user_answer = wn.textinput(problem,"Enter your answer")
-    if user_answer == answer:
-        onscreenclick(tap)
-    elif user_answer != answer:
-        textinput(problem, "Dummy! Try again...")
-
     if not inside(ball):
         ball.x = -199
         ball.y = -199
         speed.x = (x + 200) / 25
         speed.y = (y + 200) / 25
-   
-
 
 
 def inside(xy):
@@ -100,7 +84,7 @@ setup(420, 420, 370, 0)
 hideturtle()
 up()
 tracer(False)
-wn = Screen()
 onscreenclick(tap)
 move()
 done()
+
