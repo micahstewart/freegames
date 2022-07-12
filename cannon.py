@@ -35,7 +35,7 @@ def tap(x, y):
     if user_answer == answer:
         onscreenclick(tap)
     elif user_answer != answer:
-        textinput(problem, "Dummy! Try again...")
+        textinput(problem, "Wrong! Try again...")
 
     if not inside(ball):
         ball.x = -199
@@ -97,21 +97,10 @@ def move():
 
 
 setup(420, 420, 370, 0)
-
-
-
-
-
 hideturtle()
 up()
 tracer(False)
-
 wn = Screen()
-
-
 onscreenclick(tap)
-
-
-
 move()
 done()
