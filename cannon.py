@@ -36,6 +36,7 @@ def tap(x, y):
         onscreenclick(tap)
     elif user_answer != answer:
         textinput(problem, "Wrong! Try again...")
+        return
 
     if not inside(ball):
         ball.x = -199
